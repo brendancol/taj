@@ -284,10 +284,9 @@ Specification for tabular data:
 
 - Nested Rows
 
-- Cell Symbology
-  - 'style':
-  - 'breaks':
-  - 'palette':
-  - 'colorMethod':background, text, fontsize
-  - 'binMethod': Equal Interval, Natural Breaks, Quantile, 
-  - 'binMethod': Equal Interval, Natural Breaks, Quantile, 
+- Cell Symbology: cells may be [draw](https://github.com/brendancol/react-taj) with different colors, for instance, based on their values, corresponding column or index.
+  - 'style': 
+  - 'breaks': 
+  - 'palette': colors to use for drawing 
+  - 'colorMethod': background, text, fontsize
+  - 'binMethod': Equal Interval, Natural Breaks, Quantile,
