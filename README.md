@@ -290,3 +290,101 @@ Specification for tabular data:
   - 'palette': colors to use for drawing 
   - 'colorMethod': background, text, fontsize
   - 'binMethod': Equal Interval, Natural Breaks, Quantile,
+
+
+General structure model
+-----
+```json
+{
+  "columns": [
+    [
+      "sepal_length",
+      "min"
+    ],
+    [
+      "sepal_length",
+      "max"
+    ],
+    [
+      "sepal_width",
+      "min"
+    ],
+    [
+      "sepal_width",
+      "max"
+    ],
+    [
+      "petal_length",
+      "min"
+    ],
+    [
+      "petal_length",
+      "max"
+    ],
+    [
+      "petal_width",
+      "min"
+    ],
+    [
+      "petal_width",
+      "max"
+    ]
+  ],
+  "index": [
+    [
+      "setosa",
+      "north"
+    ],
+    [
+      "setosa",
+      "south"
+    ]
+  ],
+  "data": [
+    [
+      4.6,
+      5.1,
+      3.1,
+      3.5,
+      1.4,
+      1.5,
+      0.2,
+      0.2
+    ],
+    [
+      4.7,
+      5,
+      3,
+      3.6,
+      1.3,
+      1.4,
+      0.2,
+      0.2
+    ]
+  ],
+  "meta" : {
+    "tableType": "MultiIndex",
+    "columns" : {
+      "type": [
+        "number",
+        "number",
+        "number",
+        "number",
+        "number",
+        "number",
+        "number",
+        "number"
+      ],
+    },
+    "index" : {
+      "type": null
+    },
+    "cells" : {
+      "style": <style_name/url>,
+      "palette": <palette_name/values>,
+    },
+  },
+}
+```
+
+Cells can be colored according to their values across the corresponding column or row.
