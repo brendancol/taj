@@ -362,10 +362,10 @@ General structure model
       0.2
     ]
   ],
-  "meta" : {
+  "meta" : {
     "tableType": "MultiIndex",
-    "columns" : {
-      "type": [
+    "columns" : {
+      "type": [
         "number",
         "number",
         "number",
@@ -376,14 +376,14 @@ General structure model
         "number"
       ],
     },
-    "index" : {
-      "type": null
+    "index" : {
+      "type": null
     },
-    "cells" : {
-      "style": <style_name/url>,
-      "palette": <palette_name/values>,
+    "cells" : {
+      "style": <style_name/url>,
+      "palette": <palette_name/values>,
     },
-  },
+  },
 }
 ```
 
