@@ -5,75 +5,123 @@ Tables As JSON
 #### Simple Tables
 ```json
 {
-  "schema": {
-    "fields": [
-      {
-        "name": "index",
-        "type": "integer"
-      },
-      {
-        "name": "sepal_length",
-        "type": "number"
-      },
-      {
-        "name": "sepal_width",
-        "type": "number"
-      },
-      {
-        "name": "petal_length",
-        "type": "number"
-      },
-      {
-        "name": "petal_width",
-        "type": "number"
-      },
-      {
-        "name": "species",
-        "type": "string"
-      }
+    "columns": [
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width",
+        "species"
     ],
-    "primaryKey": [
-      "index"
-    ]
-  },
-  "data": {
-    "sepal_length": {
-      "0": 5.1,
-      "1": 4.9,
-      "2": 4.7,
-      "3": 4.6,
-      "4": 5
-    },
-    "sepal_width": {
-      "0": 3.5,
-      "1": 3,
-      "2": 3.2,
-      "3": 3.1,
-      "4": 3.6
-    },
-    "petal_length": {
-      "0": 1.4,
-      "1": 1.4,
-      "2": 1.3,
-      "3": 1.5,
-      "4": 1.4
-    },
-    "petal_width": {
-      "0": 0.2,
-      "1": 0.2,
-      "2": 0.2,
-      "3": 0.2,
-      "4": 0.2
-    },
-    "species": {
-      "0": "setosa",
-      "1": "setosa",
-      "2": "setosa",
-      "3": "setosa",
-      "4": "setosa"
+    "index": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+    ],
+    "data": [
+        [
+            5.1,
+            3.5,
+            1.4,
+            0.2,
+            "setosa"
+        ],
+        [
+            4.9,
+            3.0,
+            1.4,
+            0.2,
+            "setosa"
+        ],
+        [
+            4.7,
+            3.2,
+            1.3,
+            0.2,
+            "setosa"
+        ],
+        [
+            4.6,
+            3.1,
+            1.5,
+            0.2,
+            "setosa"
+        ],
+        [
+            5.0,
+            3.6,
+            1.4,
+            0.2,
+            "setosa"
+        ],
+        [
+            5.4,
+            3.9,
+            1.7,
+            0.4,
+            "setosa"
+        ],
+        [
+            4.6,
+            3.4,
+            1.4,
+            0.3,
+            "setosa"
+        ],
+        [
+            5.0,
+            3.4,
+            1.5,
+            0.2,
+            "setosa"
+        ],
+        [
+            4.4,
+            2.9,
+            1.4,
+            0.2,
+            "setosa"
+        ],
+        [
+            4.9,
+            3.1,
+            1.5,
+            0.1,
+            "setosa"
+        ]
+    ],
+    "meta": {
+        "tableType": "Simple",
+        "columns": {
+            "sepal_width": {
+                "colors": [
+                    "#005a32",
+                    "#238b45",
+                    "#41ab5d",
+                    "#74c476",
+                    "#a1d99b",
+                    "#c7e9c0",
+                    "#edf8e9"
+                ],
+                "bins": [
+                    2.898,
+                    3.043,
+                    3.186,
+                    3.329,
+                    3.471,
+                    3.614,
+                    3.757,
+                    3.9
+                ]
+            }
+        }
     }
-  },
-  "tableType": "Simple"
 }
 ```
 
@@ -290,101 +338,3 @@ Specification for tabular data:
   - 'palette': colors to use for drawing 
   - 'colorMethod': background, text, fontsize
   - 'binMethod': Equal Interval, Natural Breaks, Quantile,
-
-
-General structure model
------
-```json
-{
-  "columns": [
-    [
-      "sepal_length",
-      "min"
-    ],
-    [
-      "sepal_length",
-      "max"
-    ],
-    [
-      "sepal_width",
-      "min"
-    ],
-    [
-      "sepal_width",
-      "max"
-    ],
-    [
-      "petal_length",
-      "min"
-    ],
-    [
-      "petal_length",
-      "max"
-    ],
-    [
-      "petal_width",
-      "min"
-    ],
-    [
-      "petal_width",
-      "max"
-    ]
-  ],
-  "index": [
-    [
-      "setosa",
-      "north"
-    ],
-    [
-      "setosa",
-      "south"
-    ]
-  ],
-  "data": [
-    [
-      4.6,
-      5.1,
-      3.1,
-      3.5,
-      1.4,
-      1.5,
-      0.2,
-      0.2
-    ],
-    [
-      4.7,
-      5,
-      3,
-      3.6,
-      1.3,
-      1.4,
-      0.2,
-      0.2
-    ]
-  ],
-  "meta" : {
-    "tableType": "MultiIndex",
-    "columns" : {
-      "type": [
-        "number",
-        "number",
-        "number",
-        "number",
-        "number",
-        "number",
-        "number",
-        "number"
-      ],
-    },
-    "index" : {
-      "type": null
-    },
-    "cells" : {
-      "style": <style_name/url>,
-      "palette": <palette_name/values>,
-    },
-  },
-}
-```
-
-Cells can be colored according to their values across the corresponding column or row.
