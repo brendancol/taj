@@ -126,7 +126,254 @@ Tables As JSON
 ```
 
 
+#### Nested Rows
+```json
+{
+    "columns": [
+        "sepal_length",
+        "sepal_width",
+        "petal_length",
+        "petal_width"
+    ],
+    "index": [
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "south"
+        ]
+    ],
+    "data": [
+        [
+            5.1,
+            3.5,
+            1.4,
+            0.2
+        ],
+        [
+            4.9,
+            3.0,
+            1.4,
+            0.2
+        ],
+        [
+            4.7,
+            3.2,
+            1.3,
+            0.2
+        ],
+        [
+            4.6,
+            3.1,
+            1.5,
+            0.2
+        ],
+        [
+            5.0,
+            3.6,
+            1.4,
+            0.2
+        ],
+        [
+            5.4,
+            3.9,
+            1.7,
+            0.4
+        ],
+        [
+            4.6,
+            3.4,
+            1.4,
+            0.3
+        ],
+        [
+            5.0,
+            3.4,
+            1.5,
+            0.2
+        ],
+        [
+            4.4,
+            2.9,
+            1.4,
+            0.2
+        ],
+        [
+            4.9,
+            3.1,
+            1.5,
+            0.1
+        ],
+        [
+            5.4,
+            3.7,
+            1.5,
+            0.2
+        ],
+        [
+            4.8,
+            3.4,
+            1.6,
+            0.2
+        ],
+        [
+            4.8,
+            3.0,
+            1.4,
+            0.1
+        ],
+        [
+            4.3,
+            3.0,
+            1.1,
+            0.1
+        ],
+        [
+            5.8,
+            4.0,
+            1.2,
+            0.2
+        ],
+        [
+            5.7,
+            4.4,
+            1.5,
+            0.4
+        ],
+        [
+            5.4,
+            3.9,
+            1.3,
+            0.4
+        ],
+        [
+            5.1,
+            3.5,
+            1.4,
+            0.3
+        ],
+        [
+            5.7,
+            3.8,
+            1.7,
+            0.3
+        ],
+        [
+            5.1,
+            3.8,
+            1.5,
+            0.3
+        ]
+    ],
+    "meta": {
+        "tableType": "MultiIndex",
+        "index": {
+            "type": "MultiIndex",
+            "name": [
+                "species",
+                "location"
+            ]
+        },
+        "columns": {
+            "sepal_length": {
+                "colors": [
+                    "#000003",
+                    "#711F81",
+                    "#F0605D",
+                    "#FBFCBF"
+                ],
+                "bins": [
+                    4.2989999999999995,
+                    4.775,
+                    5.0,
+                    5.4,
+                    5.8
+                ]
+            }
+        }
+    }
+}
+```
+
+
 #### Nested Columns
+
+**TO BE UPDATED**
+
 ```json
 {
   "columns": [
