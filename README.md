@@ -98,6 +98,10 @@ Tables As JSON
     ],
     "meta": {
         "tableType": "Simple",
+        "index": {
+            "type": "Simple",
+            "name": null
+        },
         "columns": {
             "sepal_width": {
                 "colors": [
