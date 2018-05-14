@@ -11,7 +11,7 @@ The JSON structure is composed by four sections:
 * data : list of values disposed rowwise
 * meta : metadata section for general visual aspects
 
-```json
+```
 {
     "columns": [
         < If 'columns:type' is "Simple", this is a list of column names >
