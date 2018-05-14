@@ -1,6 +1,57 @@
 Tables As JSON
 -------
 
+TAJ is a specification for *Pandas DataFrames* as a JSON structure including
+not only the data and table's metadata but also visual parameters to visualize
+it in a uniform way.
+
+The JSON structure is composed by four sections:
+* columns : name of the columns
+* index : table index values
+* data : list of values disposed rowwise
+* meta : metadata section for general visual aspects
+
+```json
+{
+    "columns": [
+        < If 'columns:type' is "Simple", this is a list of column names >
+        < If 'columns:type' is "MultiIndex", this a list of tuples with column names >
+    ],
+    "index": [
+    ],
+    "data": [
+    ],
+    "meta": {
+        "tableType": < "Simple" or "MultiIndex" > ,
+        "style" : {
+            "colors": {
+                "bg": < #RGB value > ,
+                "fg": < #RGB value >
+            }
+        },
+        "index": {
+            "type": < "Simple" or "MultiIndex" > ,
+            "name": < String, List of strings or 'null' >
+            "levels": < Number of levels for a "MultiIndex", value is greater-or-equal to 1 ("Simple") >
+        },
+        "columns": {
+            "type": < "Simple" or "MultiIndex" > ,
+            "name": < String, List of strings or 'null' >,
+            "levels": < Number of levels for a "MultiIndex", value is greater-or-equal to 1 ("Simple") >
+            "bins": {
+                # for each column with 'bins' defined, the following mapping:
+                < Column name >: {
+                    "edges": < List of values >,
+                    "colors": {
+                        "bg": < List of #RGB values >,
+                        "fg": < List of #RGB values >
+                    }
+                }
+            }
+        },
+    }
+}
+```
 
 #### Simple Tables
 ```json
@@ -575,7 +626,7 @@ Specification for tabular data:
 - Visual operations at cell, column, row, table levels
 
 - Column Operations
-  - Binning: 
+  - Binning:
 
 - Simple Table
 
@@ -584,8 +635,8 @@ Specification for tabular data:
 - Nested Rows
 
 - Cell Symbology: cells may be [draw](https://github.com/brendancol/react-taj) with different colors, for instance, based on their values, corresponding column or index.
-  - 'style': 
-  - 'breaks': 
-  - 'palette': colors to use for drawing 
+  - 'style':
+  - 'breaks':
+  - 'palette': colors to use for drawing
   - 'colorMethod': background, text, fontsize
   - 'binMethod': Equal Interval, Natural Breaks, Quantile,
