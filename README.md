@@ -64,38 +64,62 @@ The JSON structure is composed by four sections:
         "species"
     ],
     "index": [
-        0,
-        1,
-        2,
+        22,
+        82,
+        128,
+        54,
+        134,
         3,
-        4,
+        135,
+        10,
+        100,
+        88,
+        60,
+        149,
+        141,
+        23,
+        78,
+        86,
+        72,
+        16,
         5,
-        6,
-        7,
-        8,
-        9
+        144
     ],
     "data": [
         [
-            5.1,
-            3.5,
-            1.4,
+            4.6,
+            3.6,
+            1.0,
             0.2,
             "setosa"
         ],
         [
-            4.9,
-            3.0,
-            1.4,
-            0.2,
-            "setosa"
+            5.8,
+            2.7,
+            3.9,
+            1.2,
+            "versicolor"
         ],
         [
-            4.7,
-            3.2,
-            1.3,
-            0.2,
-            "setosa"
+            6.4,
+            2.8,
+            5.6,
+            2.1,
+            "virginica"
+        ],
+        [
+            6.5,
+            2.8,
+            4.6,
+            1.5,
+            "versicolor"
+        ],
+        [
+            6.1,
+            2.6,
+            5.6,
+            1.4,
+            "virginica"
         ],
         [
             4.6,
@@ -105,10 +129,87 @@ The JSON structure is composed by four sections:
             "setosa"
         ],
         [
-            5.0,
-            3.6,
-            1.4,
+            7.7,
+            3.0,
+            6.1,
+            2.3,
+            "virginica"
+        ],
+        [
+            5.4,
+            3.7,
+            1.5,
             0.2,
+            "setosa"
+        ],
+        [
+            6.3,
+            3.3,
+            6.0,
+            2.5,
+            "virginica"
+        ],
+        [
+            5.6,
+            3.0,
+            4.1,
+            1.3,
+            "versicolor"
+        ],
+        [
+            5.0,
+            2.0,
+            3.5,
+            1.0,
+            "versicolor"
+        ],
+        [
+            5.9,
+            3.0,
+            5.1,
+            1.8,
+            "virginica"
+        ],
+        [
+            6.9,
+            3.1,
+            5.1,
+            2.3,
+            "virginica"
+        ],
+        [
+            5.1,
+            3.3,
+            1.7,
+            0.5,
+            "setosa"
+        ],
+        [
+            6.0,
+            2.9,
+            4.5,
+            1.5,
+            "versicolor"
+        ],
+        [
+            6.7,
+            3.1,
+            4.7,
+            1.5,
+            "versicolor"
+        ],
+        [
+            6.3,
+            2.5,
+            4.9,
+            1.5,
+            "versicolor"
+        ],
+        [
+            5.4,
+            3.9,
+            1.3,
+            0.4,
             "setosa"
         ],
         [
@@ -119,62 +220,28 @@ The JSON structure is composed by four sections:
             "setosa"
         ],
         [
-            4.6,
-            3.4,
-            1.4,
-            0.3,
-            "setosa"
-        ],
-        [
-            5.0,
-            3.4,
-            1.5,
-            0.2,
-            "setosa"
-        ],
-        [
-            4.4,
-            2.9,
-            1.4,
-            0.2,
-            "setosa"
-        ],
-        [
-            4.9,
-            3.1,
-            1.5,
-            0.1,
-            "setosa"
+            6.7,
+            3.3,
+            5.7,
+            2.5,
+            "virginica"
         ]
     ],
     "meta": {
         "tableType": "Simple",
+        "colors": {
+            "bg": "#FFFFFF",
+            "fg": "#000000"
+        },
+        "columns": {
+            "type": "Simple",
+            "name": null,
+            "bins": {},
+            "colors": {}
+        },
         "index": {
             "type": "Simple",
             "name": null
-        },
-        "columns": {
-            "sepal_width": {
-                "colors": [
-                    "#005a32",
-                    "#238b45",
-                    "#41ab5d",
-                    "#74c476",
-                    "#a1d99b",
-                    "#c7e9c0",
-                    "#edf8e9"
-                ],
-                "bins": [
-                    2.898,
-                    3.043,
-                    3.186,
-                    3.329,
-                    3.471,
-                    3.614,
-                    3.757,
-                    3.9
-                ]
-            }
         }
     }
 }
