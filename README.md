@@ -23,11 +23,9 @@ The JSON structure is composed by four sections:
     ],
     "meta": {
         "tableType": < "Simple" or "MultiIndex" > ,
-        "style" : {
-            "colors": {
-                "bg": < #RGB value > ,
-                "fg": < #RGB value >
-            }
+        "colors": {
+            "bg": < #RGB value > ,
+            "fg": < #RGB value >
         },
         "index": {
             "type": < "Simple" or "MultiIndex" > ,
