@@ -23,23 +23,18 @@ The JSON structure is composed by four sections:
     ],
     "meta": {
         "tableType": < "Simple" or "MultiIndex" > ,
-        "style" : {
-            "colors": {
-                "bg": < #RGB value > ,
-                "fg": < #RGB value >
-            }
+        "colors": {
+            "bg": < #RGB value > ,
+            "fg": < #RGB value >
         },
         "index": {
             "type": < "Simple" or "MultiIndex" > ,
             "name": < String, List of strings or 'null' >
-            "levels": < Number of levels for a "MultiIndex", value is greater-or-equal to 1 ("Simple") >
         },
         "columns": {
             "type": < "Simple" or "MultiIndex" > ,
             "name": < String, List of strings or 'null' >,
-            "levels": < Number of levels for a "MultiIndex", value is greater-or-equal to 1 ("Simple") >
             "bins": {
-                # for each column with 'bins' defined, the following mapping:
                 < Column name >: {
                     "edges": < List of values >,
                     "colors": {
