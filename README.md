@@ -53,7 +53,233 @@ The JSON structure is composed by four sections:
 }
 ```
 
-#### Simple Tables
+
+## Example of tables
+
+### Nested Columns
+#### *Without* column/cell colouring
+```json
+{
+    "columns": [
+        [
+            "sepal_length",
+            "min"
+        ],
+        [
+            "sepal_length",
+            "max"
+        ],
+        [
+            "sepal_width",
+            "min"
+        ],
+        [
+            "sepal_width",
+            "max"
+        ],
+        [
+            "petal_length",
+            "min"
+        ],
+        [
+            "petal_length",
+            "max"
+        ],
+        [
+            "petal_width",
+            "min"
+        ],
+        [
+            "petal_width",
+            "max"
+        ]
+    ],
+    "index": [
+        "setosa",
+        "versicolor",
+        "virginica"
+    ],
+    "data": [
+        [
+            4.4,
+            5.2,
+            2.9,
+            4.1,
+            1.3,
+            1.6,
+            0.1,
+            0.2
+        ],
+        [
+            5.0,
+            7.0,
+            2.0,
+            3.2,
+            3.5,
+            4.9,
+            1.0,
+            1.5
+        ],
+        [
+            6.3,
+            7.6,
+            2.8,
+            3.4,
+            5.1,
+            6.6,
+            1.5,
+            2.4
+        ]
+    ],
+    "meta": {
+        "tableType": "MultiIndex",
+        "colors": {
+            "bg": "#FFFFFF",
+            "fg": "#000000"
+        },
+        "columns": {
+            "type": "MultiIndex",
+            "name": [
+                null,
+                null
+            ],
+            "bins": {}
+        },
+        "index": {
+            "type": "Simple",
+            "name": "species"
+        }
+    }
+}
+```
+
+
+#### *With* column/cell colouring
+```json
+{
+    "columns": [
+        [
+            "sepal_length",
+            "min"
+        ],
+        [
+            "sepal_length",
+            "max"
+        ],
+        [
+            "sepal_width",
+            "min"
+        ],
+        [
+            "sepal_width",
+            "max"
+        ],
+        [
+            "petal_length",
+            "min"
+        ],
+        [
+            "petal_length",
+            "max"
+        ],
+        [
+            "petal_width",
+            "min"
+        ],
+        [
+            "petal_width",
+            "max"
+        ]
+    ],
+    "index": [
+        "setosa",
+        "versicolor",
+        "virginica"
+    ],
+    "data": [
+        [
+            4.4,
+            5.2,
+            2.9,
+            4.1,
+            1.3,
+            1.6,
+            0.1,
+            0.2
+        ],
+        [
+            5.0,
+            7.0,
+            2.0,
+            3.2,
+            3.5,
+            4.9,
+            1.0,
+            1.5
+        ],
+        [
+            6.3,
+            7.6,
+            2.8,
+            3.4,
+            5.1,
+            6.6,
+            1.5,
+            2.4
+        ]
+    ],
+    "meta": {
+        "tableType": "MultiIndex",
+        "colors": {
+            "bg": "#FFFFFF",
+            "fg": "#000000"
+        },
+        "columns": {
+            "type": "MultiIndex",
+            "name": [
+                null,
+                null
+            ],
+            "bins": {
+                "sepal_length|min": {
+                    "colors": {
+                        "bg": [
+                            "#006d2c",
+                            "#31a354",
+                            "#74c476",
+                            "#bae4b3",
+                            "#edf8e9"
+                        ],
+                        "fg": [
+                            "#6d0041",
+                            "#a33180",
+                            "#c474c2",
+                            "#ddb3e4",
+                            "#f4e9f8"
+                        ]
+                    },
+                    "edges": [
+                        4.396999999999999,
+                        4.78,
+                        5.16,
+                        5.54,
+                        5.92,
+                        6.3
+                    ]
+                }
+            }
+        },
+        "index": {
+            "type": "Simple",
+            "name": "species"
+        }
+    }
+}
+```
+
+
+### Simple Tables
+#### *With* column/cell colouring
 ```json
 {
     "columns": [
@@ -64,95 +290,95 @@ The JSON structure is composed by four sections:
         "species"
     ],
     "index": [
-        22,
-        82,
-        128,
-        54,
-        134,
-        3,
-        135,
-        10,
-        100,
-        88,
-        60,
-        149,
-        141,
-        23,
-        78,
         86,
+        2,
+        0,
+        74,
+        88,
+        92,
+        136,
+        105,
+        87,
+        58,
+        60,
+        32,
+        140,
+        29,
         72,
-        16,
-        5,
-        144
+        133,
+        50,
+        27,
+        51,
+        8
     ],
     "data": [
         [
-            4.6,
-            3.6,
-            1.0,
+            6.7,
+            3.1,
+            4.7,
+            1.5,
+            "versicolor"
+        ],
+        [
+            4.7,
+            3.2,
+            1.3,
             0.2,
             "setosa"
         ],
         [
-            5.8,
-            2.7,
-            3.9,
-            1.2,
-            "versicolor"
+            5.1,
+            3.5,
+            1.4,
+            0.2,
+            "setosa"
         ],
         [
             6.4,
-            2.8,
-            5.6,
-            2.1,
-            "virginica"
-        ],
-        [
-            6.5,
-            2.8,
-            4.6,
-            1.5,
+            2.9,
+            4.3,
+            1.3,
             "versicolor"
-        ],
-        [
-            6.1,
-            2.6,
-            5.6,
-            1.4,
-            "virginica"
-        ],
-        [
-            4.6,
-            3.1,
-            1.5,
-            0.2,
-            "setosa"
-        ],
-        [
-            7.7,
-            3.0,
-            6.1,
-            2.3,
-            "virginica"
-        ],
-        [
-            5.4,
-            3.7,
-            1.5,
-            0.2,
-            "setosa"
-        ],
-        [
-            6.3,
-            3.3,
-            6.0,
-            2.5,
-            "virginica"
         ],
         [
             5.6,
             3.0,
             4.1,
+            1.3,
+            "versicolor"
+        ],
+        [
+            5.8,
+            2.6,
+            4.0,
+            1.2,
+            "versicolor"
+        ],
+        [
+            6.3,
+            3.4,
+            5.6,
+            2.4,
+            "virginica"
+        ],
+        [
+            7.6,
+            3.0,
+            6.6,
+            2.1,
+            "virginica"
+        ],
+        [
+            6.3,
+            2.3,
+            4.4,
+            1.3,
+            "versicolor"
+        ],
+        [
+            6.6,
+            2.9,
+            4.6,
             1.3,
             "versicolor"
         ],
@@ -164,39 +390,25 @@ The JSON structure is composed by four sections:
             "versicolor"
         ],
         [
-            5.9,
-            3.0,
-            5.1,
-            1.8,
-            "virginica"
-        ],
-        [
-            6.9,
-            3.1,
-            5.1,
-            2.3,
-            "virginica"
-        ],
-        [
-            5.1,
-            3.3,
-            1.7,
-            0.5,
-            "setosa"
-        ],
-        [
-            6.0,
-            2.9,
-            4.5,
+            5.2,
+            4.1,
             1.5,
-            "versicolor"
+            0.1,
+            "setosa"
         ],
         [
             6.7,
             3.1,
+            5.6,
+            2.4,
+            "virginica"
+        ],
+        [
             4.7,
-            1.5,
-            "versicolor"
+            3.2,
+            1.6,
+            0.2,
+            "setosa"
         ],
         [
             6.3,
@@ -206,25 +418,39 @@ The JSON structure is composed by four sections:
             "versicolor"
         ],
         [
-            5.4,
-            3.9,
-            1.3,
-            0.4,
-            "setosa"
-        ],
-        [
-            5.4,
-            3.9,
-            1.7,
-            0.4,
-            "setosa"
-        ],
-        [
-            6.7,
-            3.3,
-            5.7,
-            2.5,
+            6.3,
+            2.8,
+            5.1,
+            1.5,
             "virginica"
+        ],
+        [
+            7.0,
+            3.2,
+            4.7,
+            1.4,
+            "versicolor"
+        ],
+        [
+            5.2,
+            3.5,
+            1.5,
+            0.2,
+            "setosa"
+        ],
+        [
+            6.4,
+            3.2,
+            4.5,
+            1.5,
+            "versicolor"
+        ],
+        [
+            4.4,
+            2.9,
+            1.4,
+            0.2,
+            "setosa"
         ]
     ],
     "meta": {
@@ -236,8 +462,34 @@ The JSON structure is composed by four sections:
         "columns": {
             "type": "Simple",
             "name": null,
-            "bins": {},
-            "colors": {}
+            "bins": {
+                "sepal_length": {
+                    "colors": {
+                        "bg": [
+                            "#006d2c",
+                            "#31a354",
+                            "#74c476",
+                            "#bae4b3",
+                            "#edf8e9"
+                        ],
+                        "fg": [
+                            "#6d0041",
+                            "#a33180",
+                            "#c474c2",
+                            "#ddb3e4",
+                            "#f4e9f8"
+                        ]
+                    },
+                    "edges": [
+                        4.396,
+                        5.04,
+                        5.68,
+                        6.32,
+                        6.96,
+                        7.6
+                    ]
+                }
+            }
         },
         "index": {
             "type": "Simple",
@@ -246,442 +498,6 @@ The JSON structure is composed by four sections:
     }
 }
 ```
-
-
-#### Nested Rows
-```json
-{
-    "columns": [
-        "sepal_length",
-        "sepal_width",
-        "petal_length",
-        "petal_width"
-    ],
-    "index": [
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "south"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "north"
-        ],
-        [
-            "setosa",
-            "south"
-        ]
-    ],
-    "data": [
-        [
-            5.1,
-            3.5,
-            1.4,
-            0.2
-        ],
-        [
-            4.9,
-            3.0,
-            1.4,
-            0.2
-        ],
-        [
-            4.7,
-            3.2,
-            1.3,
-            0.2
-        ],
-        [
-            4.6,
-            3.1,
-            1.5,
-            0.2
-        ],
-        [
-            5.0,
-            3.6,
-            1.4,
-            0.2
-        ],
-        [
-            5.4,
-            3.9,
-            1.7,
-            0.4
-        ],
-        [
-            4.6,
-            3.4,
-            1.4,
-            0.3
-        ],
-        [
-            5.0,
-            3.4,
-            1.5,
-            0.2
-        ],
-        [
-            4.4,
-            2.9,
-            1.4,
-            0.2
-        ],
-        [
-            4.9,
-            3.1,
-            1.5,
-            0.1
-        ],
-        [
-            5.4,
-            3.7,
-            1.5,
-            0.2
-        ],
-        [
-            4.8,
-            3.4,
-            1.6,
-            0.2
-        ],
-        [
-            4.8,
-            3.0,
-            1.4,
-            0.1
-        ],
-        [
-            4.3,
-            3.0,
-            1.1,
-            0.1
-        ],
-        [
-            5.8,
-            4.0,
-            1.2,
-            0.2
-        ],
-        [
-            5.7,
-            4.4,
-            1.5,
-            0.4
-        ],
-        [
-            5.4,
-            3.9,
-            1.3,
-            0.4
-        ],
-        [
-            5.1,
-            3.5,
-            1.4,
-            0.3
-        ],
-        [
-            5.7,
-            3.8,
-            1.7,
-            0.3
-        ],
-        [
-            5.1,
-            3.8,
-            1.5,
-            0.3
-        ]
-    ],
-    "meta": {
-        "tableType": "MultiIndex",
-        "index": {
-            "type": "MultiIndex",
-            "name": [
-                "species",
-                "location"
-            ]
-        },
-        "columns": {
-            "sepal_length": {
-                "colors": [
-                    "#000003",
-                    "#711F81",
-                    "#F0605D",
-                    "#FBFCBF"
-                ],
-                "bins": [
-                    4.2989999999999995,
-                    4.775,
-                    5.0,
-                    5.4,
-                    5.8
-                ]
-            }
-        }
-    }
-}
-```
-
-
-#### Nested Columns
-
-**TO BE UPDATED**
-
-```json
-{
-  "columns": [
-    [
-      "sepal_length",
-      "min"
-    ],
-    [
-      "sepal_length",
-      "max"
-    ],
-    [
-      "sepal_length",
-      "mean"
-    ],
-    [
-      "sepal_width",
-      "min"
-    ],
-    [
-      "sepal_width",
-      "max"
-    ],
-    [
-      "sepal_width",
-      "mean"
-    ],
-    [
-      "petal_length",
-      "min"
-    ],
-    [
-      "petal_length",
-      "max"
-    ],
-    [
-      "petal_length",
-      "mean"
-    ],
-    [
-      "petal_width",
-      "min"
-    ],
-    [
-      "petal_width",
-      "max"
-    ],
-    [
-      "petal_width",
-      "mean"
-    ]
-  ],
-  "index": [
-    "setosa",
-    "versicolor",
-    "virginica"
-  ],
-  "data": [
-    [
-      4.3,
-      5.8,
-      5.006,
-      2.3,
-      4.4,
-      3.428,
-      1,
-      1.9,
-      1.462,
-      0.1,
-      0.6,
-      0.246
-    ],
-    [
-      4.9,
-      7,
-      5.936,
-      2,
-      3.4,
-      2.77,
-      3,
-      5.1,
-      4.26,
-      1,
-      1.8,
-      1.326
-    ],
-    [
-      4.9,
-      7.9,
-      6.588,
-      2.2,
-      3.8,
-      2.974,
-      4.5,
-      6.9,
-      5.552,
-      1.4,
-      2.5,
-      2.026
-    ]
-  ],
-  "index_field": "species",
-  "tableType": "MultiIndex"
-}
-```
-
-
-#### Nested Columns and Rows:
-```json
-{
-  "columns": [
-    [
-      "sepal_length",
-      "min"
-    ],
-    [
-      "sepal_length",
-      "max"
-    ],
-    [
-      "sepal_width",
-      "min"
-    ],
-    [
-      "sepal_width",
-      "max"
-    ],
-    [
-      "petal_length",
-      "min"
-    ],
-    [
-      "petal_length",
-      "max"
-    ],
-    [
-      "petal_width",
-      "min"
-    ],
-    [
-      "petal_width",
-      "max"
-    ]
-  ],
-  "index": [
-    [
-      "setosa",
-      "north"
-    ],
-    [
-      "setosa",
-      "south"
-    ]
-  ],
-  "data": [
-    [
-      4.6,
-      5.1,
-      3.1,
-      3.5,
-      1.4,
-      1.5,
-      0.2,
-      0.2
-    ],
-    [
-      4.7,
-      5,
-      3,
-      3.6,
-      1.3,
-      1.4,
-      0.2,
-      0.2
-    ]
-  ],
-  "index_field": null,
-  "tableType": "MultiIndex"
-}
-```
-
-
-
-
-
-
 
 
 CellOps
