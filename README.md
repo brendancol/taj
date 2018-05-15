@@ -51,6 +51,184 @@ The JSON structure is composed by four sections:
 
 ## Example of tables
 
+### Neste Rows & Columns
+#### *With* column/cell colouring
+```json
+{
+    "columns": [
+        [
+            "sepal_length",
+            "min"
+        ],
+        [
+            "sepal_length",
+            "max"
+        ],
+        [
+            "sepal_width",
+            "min"
+        ],
+        [
+            "sepal_width",
+            "max"
+        ],
+        [
+            "petal_length",
+            "min"
+        ],
+        [
+            "petal_length",
+            "max"
+        ],
+        [
+            "petal_width",
+            "min"
+        ],
+        [
+            "petal_width",
+            "max"
+        ]
+    ],
+    "index": [
+        [
+            "setosa",
+            "north"
+        ],
+        [
+            "setosa",
+            "south"
+        ],
+        [
+            "versicolor",
+            "north"
+        ],
+        [
+            "versicolor",
+            "south"
+        ],
+        [
+            "virginica",
+            "north"
+        ],
+        [
+            "virginica",
+            "south"
+        ]
+    ],
+    "data": [
+        [
+            4.4,
+            5.5,
+            2.9,
+            4.2,
+            1.0,
+            1.9,
+            0.1,
+            0.6
+        ],
+        [
+            4.3,
+            5.8,
+            2.3,
+            4.4,
+            1.1,
+            1.9,
+            0.1,
+            0.5
+        ],
+        [
+            4.9,
+            6.9,
+            2.2,
+            3.4,
+            3.0,
+            4.9,
+            1.0,
+            1.6
+        ],
+        [
+            5.0,
+            7.0,
+            2.0,
+            3.3,
+            3.5,
+            5.1,
+            1.0,
+            1.8
+        ],
+        [
+            4.9,
+            7.9,
+            2.5,
+            3.8,
+            4.5,
+            6.7,
+            1.4,
+            2.5
+        ],
+        [
+            5.6,
+            7.7,
+            2.2,
+            3.4,
+            4.9,
+            6.9,
+            1.5,
+            2.5
+        ]
+    ],
+    "meta": {
+        "tableType": "MultiIndex",
+        "colors": {
+            "bg": "#FFFFFF",
+            "fg": "#000000"
+        },
+        "columns": {
+            "type": "MultiIndex",
+            "name": [
+                null,
+                null
+            ],
+            "bins": {
+                "sepal_length|min": {
+                    "colors": {
+                        "bg": [
+                            "#006d2c",
+                            "#31a354",
+                            "#74c476",
+                            "#bae4b3",
+                            "#edf8e9"
+                        ],
+                        "fg": [
+                            "#6d0041",
+                            "#a33180",
+                            "#c474c2",
+                            "#ddb3e4",
+                            "#f4e9f8"
+                        ]
+                    },
+                    "edges": [
+                        4.298,
+                        4.56,
+                        4.82,
+                        5.08,
+                        5.34,
+                        5.6
+                    ]
+                }
+            }
+        },
+        "index": {
+            "type": "MultiIndex",
+            "name": [
+                "species",
+                "location"
+            ]
+        }
+    }
+}
+```
+
 ### Nested Columns
 #### *Without* column/cell colouring
 ```json
