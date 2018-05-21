@@ -27,7 +27,8 @@ The JSON structure is composed by four sections:
             "bg": < #RGB value > ,
             "fg": < #RGB value >
         },
-        "index": {
+        "filterFields": <List of strings>,
+        "index": {
             "type": < "Simple" or "MultiIndex" > ,
             "name": < String, List of strings or 'null' >
         },
