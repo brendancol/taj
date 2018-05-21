@@ -52,6 +52,144 @@ The JSON structure is composed by four sections:
 ## Example of tables
 
 ### Nested Rows & Columns
+#### *With* columns/cell colouring *and* "filter-fields"
+```json
+{
+  "columns": [
+    [
+      "sepal_length",
+      "min"
+    ],
+    [
+      "sepal_length",
+      "max"
+    ],
+    [
+      "sepal_width",
+      "min"
+    ],
+    [
+      "sepal_width",
+      "max"
+    ],
+    [
+      "petal_length",
+      "min"
+    ],
+    [
+      "petal_length",
+      "max"
+    ],
+    [
+      "petal_width",
+      "min"
+    ],
+    [
+      "petal_width",
+      "max"
+    ]
+  ],
+  "index": [
+    [
+      "setosa",
+      "north"
+    ],
+    [
+      "versicolor",
+      "north"
+    ],
+    [
+      "virginica",
+      "north"
+    ]
+  ],
+  "data": [
+    [
+      4.4,
+      5.7,
+      2.9,
+      4.4,
+      1.3,
+      1.6,
+      0.2,
+      0.6
+    ],
+    [
+      5.5,
+      5.7,
+      2.4,
+      2.8,
+      3.8,
+      4.5,
+      1.1,
+      1.3
+    ],
+    [
+      5.8,
+      7.7,
+      2.8,
+      3.2,
+      4.8,
+      6.7,
+      1.6,
+      2.4
+    ]
+  ],
+  "meta": {
+    "tableType": "MultiIndex",
+    "colors": {
+      "bg": "#FFFFFF",
+      "fg": "#000000"
+    },
+    "filterFields": [
+      "sepal_length|min"
+    ],
+    "columns": {
+      "type": "MultiIndex",
+      "name": [
+        null,
+        null
+      ],
+      "bins": {
+        "sepal_length|min": {
+          "colors": {
+            "bg": [
+              "#006d2c",
+              "#31a354",
+              "#74c476",
+              "#bae4b3",
+              "#edf8e9"
+            ],
+            "fg": [
+              "#6d0041",
+              "#a33180",
+              "#c474c2",
+              "#ddb3e4",
+              "#f4e9f8"
+            ]
+          },
+          "edges": [
+            4.398,
+            4.68,
+            4.96,
+            5.24,
+            5.52,
+            5.8
+          ]
+        }
+      }
+    },
+    "index": {
+      "type": "MultiIndex",
+      "name": [
+        "species",
+        "location"
+      ]
+    }
+  }
+}
+```
+
 #### *Without* column/cell colouring
 ```json
 {
