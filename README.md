@@ -14,33 +14,36 @@ The JSON structure is composed by four sections:
 ```
 {
     "columns": [
-        < If 'columns:type' is "Simple", this is a list of column names >
-        < If 'columns:type' is "MultiIndex", this a list of tuples with column names >
+        <If 'columns:type' is "Simple", this is a simple list of column names>
+        <If 'columns:type' is "MultiIndex", this a list of lists with column names>
     ],
     "index": [
+        <If 'index:type' is "Simple", this is a simple list of index values>
+        <If 'index:type' is "MultiIndex", this a list of lists with index values>
     ],
     "data": [
+        <List of lists of values, that are represented row-wise; i.e, each list of values is a row from the dataframe>
     ],
     "meta": {
         "tableType": < "Simple" or "MultiIndex" > ,
         "colors": {
-            "bg": < #RGB value > ,
-            "fg": < #RGB value >
+            "bg": <String: #RGB value> ,
+            "fg": <String: #RGB value>
         },
-        "filterFields": <List of strings>,
+        "filterFields": <List of strings: column names flagged to be filtered>,
         "index": {
-            "type": < "Simple" or "MultiIndex" > ,
-            "name": < String, List of strings or 'null' >
+            "type": <"Simple" or "MultiIndex"> ,
+            "name": <String, List of strings (if MultiIndex) or 'null'>
         },
         "columns": {
-            "type": < "Simple" or "MultiIndex" > ,
-            "name": < String, List of strings or 'null' >,
+            "type": <"Simple" or "MultiIndex"> ,
+            "name": <String, List of strings (if MultiIndex) or 'null'>,
             "bins": {
-                < Column name >: {
-                    "edges": < List of values >,
+                <String: a column name set to be coloured after bins/intervals>: {
+                    "edges": <List of values for the interval limits>,
                     "colors": {
-                        "bg": < List of #RGB values >,
-                        "fg": < List of #RGB values >
+                        "bg": <List of #RGB values>,
+                        "fg": <List of #RGB values>
                     }
                 }
             }
